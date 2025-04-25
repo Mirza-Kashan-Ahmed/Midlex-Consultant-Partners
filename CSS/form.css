@@ -1,0 +1,171 @@
+:root {
+  --primary-color: #133550;
+  --secondary-color: #f2efe8;
+  --dark-color: #ffffff;
+  --light-color: #e0e7ff;
+  --text-color: #133550;
+  --text-light1: #f2efe8;
+  --text-light2: #f2efe8;
+  --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --transition: all 0.3s ease;
+}
+
+/* Container */
+.appointment-form-wrapper {
+  max-width: 100%;
+  background: var(--dark-color);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.form-header-container {
+  background: transparent;
+  color: var(--text-light2);
+  padding: 3rem 2rem 0;
+  text-align: center;
+}
+
+.form-header-container h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+/* Form Body */
+.form-body-container {
+  padding: 4rem 5em 2em 5rem;
+}
+
+.appointment-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.3rem;
+}
+
+.half-width {
+  flex: 1;
+}
+
+.form-group-container {
+  position: relative;
+  flex: 1;
+}
+
+.form-group-container label {
+  position: absolute;
+  top: 50%;
+  left: 0.75rem;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  color: var(--primary-color);
+}
+
+/* Inputs & Textareas: underline only by default */
+.form-group-container input,
+.form-group-container textarea {
+  width: 100%;
+  background: transparent;
+  height: 1.8em;
+  border: none;
+  border-bottom: 1px solid var(--primary-color);
+  padding: 0.75rem 0.75rem 0.25rem 2.5rem;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  transition: var(--transition);
+}
+
+/* On focus: full border and subtle glow */
+.form-group-container input:focus,
+.form-group-container textarea:focus {
+  background: var(--dark-color);
+  box-shadow: none;
+  outline: none;
+  padding: 0.75rem 0.75rem 0.75rem 2.5rem;
+}
+
+/* Flatpickr Styles Override */
+.flatpickr-calendar {
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  font-family: "Inter", sans-serif;
+}
+
+.flatpickr-months {
+  background: var(--primary-color);
+  color: #fff;
+  border-radius: 6px 6px 0 0;
+}
+
+.flatpickr-weekdaycontainer {
+  color: var(--text-light2);
+}
+
+.flatpickr-day {
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.flatpickr-day:hover,
+.flatpickr-day.selected,
+.flatpickr-day.today {
+  background: var(--primary-color);
+  color: #fff;
+}
+.flatpickr-current-month{
+  color: var(--text-light2) !important;
+}
+
+.flatpickr-current-month .flatpickr-monthDropdown-months {
+  background-color: var(--primary-color) !important;
+  color: var(--text-light2) !important;
+  border: none !important;
+}
+
+.flatpickr-monthDropdown-month {
+  background-color: #ffffff !important;
+  color: var(--primary-color) !important;
+}
+
+/* Submit Button */
+.submit-button {
+  padding: 1em 5em;
+  background: var(--text-light2);
+  border: none;
+  color: var(--primary-color);
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 2em;
+  cursor: pointer;
+  transition: var(--transition);
+  margin: 1rem auto;
+}
+
+.submit-button:hover {
+  color: var(--text-light2);
+  letter-spacing: 2px;
+  background-color: var(--primary-color);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .appointment-form-wrapper {
+    margin: 1rem;
+  }
+  .form-body-container {
+    padding: 1rem;
+  }
+  .form-row {
+    flex-direction: column;
+  }
+  .logo a img{
+    display: none;
+  }
+  .footer-bottom{
+    padding: 20px 0em;
+  }
+}

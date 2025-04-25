@@ -1,0 +1,222 @@
+/* Animations for Mid-Way Consultant Website */
+
+/* Fade In animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Zoom animations */
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Float animation */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Spin animation */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Apply animations to elements */
+
+/* Header animation */
+header {
+  animation: fadeInDown 0.8s ease-out;
+}
+
+/* Hero section animation */
+.hero-content h1 {
+  animation: fadeInLeft 1s ease-out 0.2s backwards;
+}
+
+.hero-content p {
+  animation: fadeInLeft 1s ease-out 0.4s backwards;
+}
+
+/* Service cards animation */
+.service-slider-cards {
+  animation: zoomIn 0.6s ease-out backwards;
+}
+
+/* Apply staggered animations to service cards */
+.service-slider-cards:nth-child(1) { animation-delay: 0.1s; }
+.service-slider-cards:nth-child(2) { animation-delay: 0.2s; }
+.service-slider-cards:nth-child(3) { animation-delay: 0.3s; }
+.service-slider-cards:nth-child(4) { animation-delay: 0.4s; }
+.service-slider-cards:nth-child(5) { animation-delay: 0.5s; }
+.service-slider-cards:nth-child(6) { animation-delay: 0.6s; }
+.service-slider-cards:nth-child(7) { animation-delay: 0.7s; }
+.service-slider-cards:nth-child(8) { animation-delay: 0.8s; }
+.service-slider-cards:nth-child(9) { animation-delay: 0.9s; }
+
+/* About cards animation */
+.service-card {
+  animation: fadeInUp 0.8s ease-out backwards;
+}
+
+.service-card:nth-child(1) { animation-delay: 0.1s; }
+.service-card:nth-child(2) { animation-delay: 0.3s; }
+.service-card:nth-child(3) { animation-delay: 0.5s; }
+
+/* Floating animation for logo */
+.logo a {
+  animation: float 6s ease-in-out infinite;
+  display: flex;
+  align-items: center;
+}
+
+/* Social media icons animation */
+.social-links a i {
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover i {
+  animation: spin 0.7s ease-in-out;
+}
+
+/* Appointment form animation */
+.appointment-form-wrapper {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.form-group-container {
+  animation: fadeInRight 0.6s ease-out backwards;
+}
+
+.form-row:nth-child(1) .form-group-container:nth-child(1) { animation-delay: 0.1s; }
+.form-row:nth-child(1) .form-group-container:nth-child(2) { animation-delay: 0.2s; }
+.form-row:nth-child(2) .form-group-container:nth-child(1) { animation-delay: 0.3s; }
+.form-row:nth-child(2) .form-group-container:nth-child(2) { animation-delay: 0.4s; }
+.form-row:nth-child(3) .form-group-container:nth-child(1) { animation-delay: 0.5s; }
+.form-row:nth-child(3) .form-group-container:nth-child(2) { animation-delay: 0.6s; }
+
+/* Submit button animation */
+.submit-button {
+  transition: all 0.3s ease;
+  animation: fadeIn 0.8s ease-out 0.7s backwards;
+}
+
+.submit-button:hover {
+  animation: pulse 1s infinite;
+}
+
+/* Section headers animation */
+.section-header h2 {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.section-header p {
+  animation: fadeInUp 0.8s ease-out 0.2s backwards;
+}
+
+/* Intersection Observer for scroll animations */
+.animate-on-scroll {
+  opacity: 0;
+  transition: all 0.8s ease-out;
+}
+
+.animate-on-scroll.fadeInUp {
+  transform: translateY(30px);
+}
+
+.animate-on-scroll.fadeInLeft {
+  transform: translateX(-50px);
+}
+
+.animate-on-scroll.fadeInRight {
+  transform: translateX(50px);
+}
+
+.animate-on-scroll.zoomIn {
+  transform: scale(0.95);
+}
+
+.animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: translate(0) scale(1);
+} 

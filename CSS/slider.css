@@ -1,0 +1,96 @@
+:root {
+  --primary-color: #133550; /* Orange */
+  --secondary-color: #f2efe8; /* Dark blue */
+  --dark-color: white; /* rgb(237, 240, 239) */
+  --light-color: #e0e7ff; /* Light blue tint */
+  --text-color: rgb(237, 240, 239); /* rgb(237, 240, 239) */
+  --text-light1: #f2efe8; /* Lighter bluish gray */
+  --text-light2: #f2efe8; /* Lighter bluish gray */
+  --text-light: #133550; /* Lighter bluish gray */
+  --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --transition: all 0.3s ease;
+  --green-sides: #f2efe8;
+}
+
+.slider-container {
+  max-width: 1400px;
+  margin: auto;
+  position: relative;
+  padding: 3em;
+}
+
+.service-slider .service-slider-cards {
+  background: var(--primary-color);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+  margin: 0 1.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 550px;
+}
+.service-slider .service-slider-cards:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  transition: ease-in-out 0.4s;
+
+}
+
+.service-slider-cards img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  flex: 1 0 auto;
+}
+.slick-next, .slick-prev {
+  width: 40px !important;
+  height: 40px !important;
+}
+
+.service-slider-cards h3 {
+  margin-top: 15px;
+  padding: 1em;
+  font-size: 1.3rem;
+  color: var(--text-light2);
+}
+
+.service-slider-cards p {
+  font-size: 0.95rem;
+  color: var(--text-light2);
+  padding: 0 1em 1.5em 1em;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.slick-prev,
+.slick-next {
+  background: var(--primary-color);
+  color: white;
+  border-radius: 50%;
+  padding: 10px;
+  z-index: 1;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  box-shadow: var(--box-shadow);
+}
+.slick-next:before, .slick-prev:before{
+  background-color: transparent;
+}
+.width-full {
+  width: 100% !important;
+}
+
+@media (max-width: 768px) {
+  .service-slider-cards {
+    height: auto;
+  }
+
+  .service-slider-cards img {
+    height: 140px;
+  }
+}
